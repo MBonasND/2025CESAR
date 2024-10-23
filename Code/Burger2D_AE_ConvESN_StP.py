@@ -290,30 +290,6 @@ conv_esn.fit(data_train_tf,
 conv_esn.save(os.getcwd() + f'/models/conv_ESN_{nodes_enc[0]}nh_Simulation{index-1}_StP.keras')
 
 
-################################################################################################################## --- Get Predictions
-
-
-#get conv_lstm preds
-#results_conv_lstm = conv_lstm.predict(input_data, verbose=0)
-#output = open(os.getcwd() + f'/models/Conv_LSTM_predictions_LeakyReLU_Run{index}_Tau{steps_ahead}_StP.pkl', 'wb')
-#pickle.dump(results_conv_lstm, output)
-#output.close()
-
-
-# #slice testing points
-#print()
-#print()
-#print(f'Standard forecasting {steps_ahead}-steps ahead...')
-#print('Lags Used:', look_back)
-#print('Steps Ahead:', steps_ahead)
-#preds = ((windmax-windmin)*results_conv_lstm[-test_size:,:,:,0] + windmin)
-#truth = ((windmax-windmin)*windnorm[-test_size:,:,:,0] + windmin)
-
-#calculate mse for each location
-#print('RMSE of ConvLSTM (Standard): {:.6f}'.format(np.sqrt(((truth-preds)**2).mean())))
-#print()
-
-
 ################################################################################################################# --- Get Predictions (recursively)
 
 
