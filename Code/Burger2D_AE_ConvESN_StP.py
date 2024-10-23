@@ -154,7 +154,7 @@ strategy = tf.distribute.MirroredStrategy()
 start_time = time.time()
 
 #get index value from CRC
-index = int(os.getenv('SGE_TASK_ID'))
+index = 1
 print()
 print('Simulation:', index)
 start_time = time.time()
