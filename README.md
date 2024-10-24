@@ -5,7 +5,7 @@ Supplemental codes for "CESAR: A Convolutional Echo State AutoencodeR for High-R
 Folder containing a .pkl file called `burger2d.pkl` with a single simulation of the 2D Burgers' equation data used throughout the associated manuscript. 
 
 <p align = "center">
-  <img src="https://github.com/user-attachments/assets/f0733d61-a0f1-4c93-872c-2c83f6fed623" alt="F2-Burger2DSim0" width="600"/>
+  <img src="https://github.com/user-attachments/assets/f60151c9-db63-4066-aa45-aeec7d4c637d" alt="F2-Burger2DSim0" width="600"/>
   <br>
 </p>
 
