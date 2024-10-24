@@ -55,10 +55,6 @@ burgernorm = (burger2d_sim - burgermin) / (burgermax - burgermin)
 
 
 
-######### ADD NOISE TO BURGER DATA HERE
-
-
-
 
 print()
 print('Train Size:', train_size)
