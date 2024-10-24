@@ -222,7 +222,7 @@ for ell in autoencoder.layers:
 decoder_layers.append(autoencoder.layers[-1])
 
 
-#Build in ConvLSTM component
+#Build in ESN component
 with strategy.scope():
     tf.random.set_seed(1997)
     
@@ -266,7 +266,7 @@ with strategy.scope():
 
 
 
-################################################################################################################### --- Train CNN w/ ConvLSTM
+################################################################################################################### --- Train CNN w/ ESN
 
 
 
