@@ -17,4 +17,4 @@ The data used for the application are generated using the WRF model and its desc
 </p>
 
 ## Code
-Python scripts to train and produce forecasts for the simulated data using both the AE and proposed AE-ESN models. All necessary packages and functions are loaded within the script and do not need to be loaded separately.
+Python scripts to train and produce forecasts for the simulated data using both the AE and proposed CESAR models. All necessary packages and functions are loaded within the script and do not need to be loaded separately.
