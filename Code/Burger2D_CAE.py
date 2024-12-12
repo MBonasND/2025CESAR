@@ -121,7 +121,7 @@ autoencoder.fit(burgernorm[:train_size], burgernorm[:train_size],
                 callbacks=[reduce_lr]);
 
 
-autoencoder.save(os.getcwd() + f'/models/CAE_Burger2D_{nodes_enc[0]}nh_Simulation{index-1}.keras')
+autoencoder.save(os.getcwd() + f'/CAE_Burger2D_{nodes_enc[0]}nh_Simulation{index-1}.keras')
 
 
 
@@ -130,7 +130,7 @@ autoencoder.save(os.getcwd() + f'/models/CAE_Burger2D_{nodes_enc[0]}nh_Simulatio
 
 #get autoencoder preds
 results_autoencoder = autoencoder.predict(burgernorm, verbose=0)
-output = open(os.getcwd() + f'/forecasts/CAE_Burger2D_predictions_Simulation{index-1}.pkl', 'wb')
+output = open(os.getcwd() + f'/CAE_Burger2D_predictions_Simulation{index-1}.pkl', 'wb')
 pickle.dump(results_autoencoder, output)
 output.close()
 
