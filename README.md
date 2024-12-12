@@ -14,8 +14,11 @@ The data used for the application are generated using the WRF model and its desc
 <p align = "center">
   <img src="https://github.com/user-attachments/assets/afbb332a-1b21-4825-8b46-aedce156fa18" alt="F1-WRFDataPlot" width="600"/>
   <br>
-</p>!
+</p>
 
 
 ## Code
 Python scripts to train and produce forecasts for the simulated data using both the AE and proposed CESAR models. All necessary packages and functions are loaded within the script and do not need to be loaded separately.
+
+## Workflow
+Enter workflow here.
