@@ -21,7 +21,7 @@ gpus = tf.config.list_physical_devices('GPU')
 strategy = tf.distribute.MirroredStrategy()
 start_time = time.time()
 
-#get index value from CRC
+#Specify simulation
 index = 1
 print()
 print('Simulation:', index)
