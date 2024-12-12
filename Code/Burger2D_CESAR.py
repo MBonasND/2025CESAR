@@ -252,7 +252,7 @@ with strategy.scope():
     for l in decoder_layers:
         x = l(x)
     
-    #finalize model and declare original AE parameters as non-trainable
+    #finalize model and declare original CAE parameters as non-trainable
     conv_esn = keras.Model(inputs, x, name='CESAR')
     for i, l in enumerate(conv_esn.layers):
         if 'ESN' not in l.name:
