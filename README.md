@@ -1,5 +1,5 @@
 # 2025CESAR
-Supplemental codes for "CESAR: A Convolutional Echo State AutoencodeR for High-Resolution Wind Power Forecasting" by Matthew Bonas, Paolo Giani, Paola Crippa, and Stefano Castruccio
+Supplemental codes for "CESAR: A **C**onvolutional **E**cho **S**tate **A**utoencode**R** for High-Resolution Wind Power Forecasting" by Matthew Bonas, Paolo Giani, Paola Crippa, and Stefano Castruccio
 
 ## Data
 Folder containing a .pkl file called `burger2d.pkl` with a single simulation of the 2D Burgers' equation data used throughout the associated manuscript. 
