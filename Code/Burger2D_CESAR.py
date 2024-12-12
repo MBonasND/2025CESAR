@@ -204,7 +204,7 @@ epochs = 500
 
 #load pretrained model - Autoencoder
 with strategy.scope():
-    autoencoder = tf.keras.models.load_model(os.getcwd() + f'/models/CAE_Burger2D_{nodes_enc[0]}nh_Simulation{index-1}.keras')
+    autoencoder = tf.keras.models.load_model(os.getcwd() + f'/CAE_Burger2D_{nodes_enc[0]}nh_Simulation{index-1}.keras')
 
 
 #extract encoder and decoder layers from AE
@@ -287,7 +287,7 @@ conv_esn.fit(data_train_tf,
 
 
 
-conv_esn.save(os.getcwd() + f'/models/CESAR_{nodes_enc[0]}nh_Simulation{index-1}_StP.keras')
+conv_esn.save(os.getcwd() + f'/CESAR_{nodes_enc[0]}nh_Simulation{index-1}_StP.keras')
 
 
 ################################################################################################################# --- Get Predictions (recursively)
@@ -309,20 +309,8 @@ for j in range(loops):
 
 
 #save predictions output
-output = open(os.getcwd() + f'/forecasts/CESAR_predictions_Simulation{index-1}_StP_Recursive.pkl', 'wb')
+output = open(os.getcwd() + f'/CESAR_predictions_Simulation{index-1}_StP_Recursive.pkl', 'wb')
 pickle.dump(results_conv_esn, output)
 output.close()
 
 
-#slice testing points
-print()
-print(f'Recursive forecasting {steps_ahead}-steps ahead for {test_size} future points...')
-print('Lags Used:', look_back)
-#print('Steps Ahead:', steps_ahead)
-preds = ((burgermax-burgermin)*results_conv_esn[:,:,:,0] + burgermin)
-truth = ((burgermax-burgermin)*burgernorm[-test_size:,:,:,0] + burgermin)
-
-#calculate mse for each location
-scalar = 1000
-print()
-print('Median MSE of ConvESN (Recursive): {:.6f}'.format(np.median(((truth-preds)**2).mean(axis = 0))*scalar))
