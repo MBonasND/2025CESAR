@@ -119,7 +119,7 @@ autoencoder.fit(burgernorm[:train_size], burgernorm[:train_size],
                 callbacks=[reduce_lr]);
 
 
-autoencoder.save(os.getcwd() + f'/dropout/CAE_Burger2D_{nodes_enc[0]}nh_Simulation{index-1}_MCDropout{dropout_rate}.keras')
+autoencoder.save(os.getcwd() + f'/CAE_Burger2D_{nodes_enc[0]}nh_Simulation{index-1}_MCDropout{dropout_rate}.keras')
 
 
 
@@ -156,7 +156,7 @@ print()
 print('Predictions Shape:', preds.shape)
 
 # Save the predictions from multiple runs
-output = open(os.getcwd() + f'/dropout/CAE_Burger2D_predictions_Simulation{index-1}_MCDropout{dropout_rate}.pkl', 'wb')
+output = open(os.getcwd() + f'/CAE_Burger2D_predictions_Simulation{index-1}_MCDropout{dropout_rate}.pkl', 'wb')
 pickle.dump(preds, output)
 output.close()
 
