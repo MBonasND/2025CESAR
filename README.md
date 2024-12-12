@@ -21,4 +21,7 @@ The data used for the application are generated using the WRF model and its desc
 Python scripts to train and produce forecasts for the simulated data using both the AE and proposed CESAR models. All necessary packages and functions are loaded within the script and do not need to be loaded separately.
 
 ## Workflow
-Enter workflow here.
+To reproduce results for the simulated 2D Burgers’ equation data from the simulation study, one should first download the two .RData files from the “Data” folder. The next step is to then download the following .R files from the “Code” folder: “data_processing.R”, “deep_functions_physics_BurgerSim.R”, and “forecasting_BurgerSim.R”. A user should save all of the aforementioned file in the same directory, then open the file “forecasting_BurgerSim.R” and run it line by line to reproduce results for each of the methods. This file has lines of code that will load any data or functions from the other downloaded files. 
+
+To reproduce the results for the water field application, one should first request the data as detailed above and preprocess it into a 2D matrix (Time by Space) and subsample the spatial locations as detailed in the manuscript. A user should then download the following two files from the “Code” folder: “deep_functions_physics_WaterApplication.R” and “forecasting_WaterApplication.R”, then open the file “forecasting_WaterApplication.R” and run it line by line to reproduce results for each of the methods. This file has lines of code that will load any functions from the other downloaded files but a user will have to add lines themselves to load their version of the preprocessed application data.
+
