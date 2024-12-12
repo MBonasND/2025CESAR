@@ -1,8 +1,8 @@
-######################################
-######################################
-### AE-ConvESN (sequence to point) ###
-######################################
-###################################### 
+#################################
+#################################
+### CESAR (sequence to point) ###
+#################################
+################################# 
 
 #import packages and functions
 import numpy as np 
@@ -172,7 +172,7 @@ print('Simulation Shape:', burger2d_sim.shape)
 
 
 
-####################################################################################################### --- Build AE-ConvLSTM
+####################################################################################################### --- Build CESAR
 
 
 #get data for training and testing
@@ -253,7 +253,7 @@ with strategy.scope():
         x = l(x)
     
     #finalize model and declare original AE parameters as non-trainable
-    conv_esn = keras.Model(inputs, x, name='AE_ESN')
+    conv_esn = keras.Model(inputs, x, name='CESAR')
     for i, l in enumerate(conv_esn.layers):
         if 'ESN' not in l.name:
             l.trainable = False #we've already trained the autoencoder, we just need the ESN parameters
@@ -287,7 +287,7 @@ conv_esn.fit(data_train_tf,
 
 
 
-conv_esn.save(os.getcwd() + f'/models/conv_ESN_{nodes_enc[0]}nh_Simulation{index-1}_StP.keras')
+conv_esn.save(os.getcwd() + f'/models/CESAR_{nodes_enc[0]}nh_Simulation{index-1}_StP.keras')
 
 
 ################################################################################################################# --- Get Predictions (recursively)
@@ -309,7 +309,7 @@ for j in range(loops):
 
 
 #save predictions output
-output = open(os.getcwd() + f'/forecasts/Conv_ESN_predictions_Simulation{index-1}_StP_Recursive.pkl', 'wb')
+output = open(os.getcwd() + f'/forecasts/CESAR_predictions_Simulation{index-1}_StP_Recursive.pkl', 'wb')
 pickle.dump(results_conv_esn, output)
 output.close()
 
