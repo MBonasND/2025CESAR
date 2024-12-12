@@ -204,7 +204,7 @@ epochs = 500
 
 #load pretrained model - Autoencoder
 with strategy.scope():
-    autoencoder = tf.keras.models.load_model(os.getcwd() + f'/models/AE_Burger2D_{nodes_enc[0]}nh_Simulation{index-1}.keras')
+    autoencoder = tf.keras.models.load_model(os.getcwd() + f'/models/CAE_Burger2D_{nodes_enc[0]}nh_Simulation{index-1}.keras')
 
 
 #extract encoder and decoder layers from AE
