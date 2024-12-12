@@ -134,31 +134,7 @@ output = open(os.getcwd() + f'/CAE_Burger2D_predictions_Simulation{index-1}.pkl'
 pickle.dump(results_autoencoder, output)
 output.close()
 
-#slice testing points
-preds_ae = ((burgermax-burgermin)*results_autoencoder[-test_size:,:,:,:] + burgermin)
-truth = ((burgermax-burgermin)*burgernorm[-test_size:,:,:,:] + burgermin)
 
-print()
-print('Predictions Shape:', preds_ae.shape)
-print('Truth Shape:', truth.shape)
-
-#calculate mse for each location
-print()
-print('AE Nodes:', nodes_enc[0])
-print('RMSE of AE: {:.6f}'.format(np.sqrt(((truth-preds_ae)**2).mean())))
-
-
-
-
-print()
-train_time = time.time()
-delta_train = train_time - start_time
-delta_train_hrs = int(delta_train // (60*60))
-delta_train_min = int( (delta_train % (60*60)) // 60) 
-delta_train_sec = int(delta_train % 60)
-print()
-print(f'Training Time: {delta_train_hrs} hrs {delta_train_min} min {delta_train_sec} sec')
-print()
 
 
 
